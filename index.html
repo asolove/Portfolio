@@ -21,7 +21,7 @@ ul { list-style-type:circle;}
 .section>p, .section>ul{width:500px;float:right;margin-bottom:0;}
 .section>ul.skills,
 .section>ul.links { font:12px/24px arial; color:#AA9988; font-weight:bold; width:150px; float:left; margin:1.5em 0 0; padding:7px 0 0;list-style-type:none;}
-.section>ul.links { position:absolute;bottom:36px;}
+.section>ul.links { margin-top:17px;}
 .links a:link,
 .links a:visited { color:#71ae55; border-width:0px; text-decoration:underline;}
 
@@ -36,8 +36,12 @@ abbr { border-bottom:1px dotted #a98;}
 a:link, a:visited { text-decoration:none; border-bottom:1px solid #cea; color:#361;}
 
 .section { border-left:10px solid #261; padding-left:30px; overflow:auto; padding-bottom:36px; position:relative;}
+.section:nth-child(even) { border-left-color:#71ae55;}
 .section#contents { border-left-color:#c38; background-color:#f9cce8;}
-.section:nth-child(odd) { border-left-color:#71ae55;}
+#contents ul { list-style-type:none; }
+#contents ul li { margin:0 24px 12px 0;}
+#contents a:link, #contents a:visited { color:#261; border-bottom-color:#fff; font-size:1.2em; line-height:24px; }
+
 hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
 </style>
 </head>
@@ -50,9 +54,10 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     <h3>I design and build sites that stretch the web to its limits.
       Because of my work, <a href="#wssr">middle-schoolers are enjoying library books</a>,
       <a href="#ds">scholars better understand two-thousand year-old poems</a>, and 
-      <a href="#dhair">cancer patients have longer, more joyful lives.</h3>
+      <a href="#dhair">cancer patients have longer, more joyful lives.</a></h3>
     <ul class="links">
       <li>Find me at</li>
+      <li><a href="mailto:asolove@gmail.com">Email</a></li>
       <li><a href="http://www.linkedin.com/in/asolove">LinkedIn</a></li>
       <li><a href="http://github.com/asolove">GitHub</a></li>
       <li><a href="http://twitter.com/asolove">Twitter</a></li>
@@ -62,7 +67,7 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
       convinced you of an idea you disagreed with? Or encouraged you to stop
       and reflect on your life? <em>Or did anything, in fact, to make your more human?</em>
     </p>
-    <p>We don&rsquo;t yet know what the web wants to be, we are still experimenting
+    <p>We don&rsquo;t yet know what the web wants to be. We are still experimenting
       with its form&mdash;how to communicate, how to persuade, how to educate.</p>
     <p>But we do know where the new ideas will come from, the same place they always
       come from: <em>the marriage of technical mastery, design vision, and human empathy.</em>
@@ -74,17 +79,43 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
   </div>
   <div class="section" id="contents">
     <h2>Contents</h2>
-    
+    <p class="caption">A few recent highlights from ten years of web design and development.</p>
+    <ul>
+      <li><a href="#dhair">
+        Helping cancer patients find patterns in their symptoms
+      </a></li>
+      <li><a href="#ds">
+        Creating and publishing digital-born scholarship
+      </a></li>
+      <li><a href="#smart">
+        Placing graduate researchers in the right labs
+      </a></li>
+      <li><a href="#deco">
+        Simply, collaboratively, moodboarding online
+      </a></li>
+      <li><a href="#wssr">
+        Recommending children&rsquo;s books to busy parents
+      </a></li>
+      <li><a href="#wantw">
+        Deconstructing the colored rectangles and form controls we call the web
+      </a></li>
+    </ul>
   </div>
   <div class="section" id="dhair">
     <h2>Clinical Informatics Research Group</h2>
     <h3>Helping cancer patients find patterns in their symptoms.</h3>
-      
+    <ul class="skills">
+      <li>User Experience</li>
+      <li><abbr title="Hypertext Preprocessor">PHP</abbr></li>
+      <li><abbr title="Hypertext Markup Language">HTML</abbr></li>
+      <li>JavaScript</li>
+      <li>jQuery</li>
+    </ul>
     <p>During chemotherapy and other cancer treatments, patients are told
       to expect a wide variety of side-effects. Many patients have difficulty
       with their short-term memory, and grow complacent with the expectation of 
       health difficulties, so they never report their problems.</p>
-      <p>I was the web
+      <p>I was the staff web
       developer on a medical research project that asked patients to regularly
       fill out an online health survey. I built the survey software
       and the algorithms for producing statistical data. I also designed an
@@ -100,7 +131,12 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
   <div class="section" id="ds">
     <hr/>
     <h2>Digital Sinologist</h2>
-    <h3>What does digital scholarship look like?</h3>
+    <h3>Creating and publishing digital-born scholarship.</h3>
+    <ul class="skills">
+      <li>Typography</li>
+      <li>Javascript</li>
+      <li><abbr title="Hypertext Markup Language">HTML</abbr></li>
+    </ul>
     <p>My graduate studies centered on Classical Chinese poetry of the third to
       eighth centuries. The resources for doing this research are, necessarily,
       dusty old books and a handful of poorly-digitized databases.</p>
@@ -111,12 +147,15 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     <p>I built experiments for finding and publishing research in the digital
       medium:</p>
     <ul>  
-      <li>An online reader for critical editions that takes full advantage
+      <li>A prototype
+        <a href="http://digitalsinologist.com/texts/StEdmund/">online reader</a>
+        for critical editions that takes full advantage
         of hypertext and interactivity.</li>
-      <li>An easy-to-use Mac OS program for transcribing or creating critical editions.
+      <li>An easy-to-use <a href="http://www.digitalsinologist.com/blog/index.php?id=40">Mac OS program</a> for transcribing or creating critical editions.
         Once entered, the texts can be exported as interactive webpages or professionally-typeset
          books (using TeX)</li>
-      <li>A visualization tool for creating interactive exhibits. It displays
+      <li>A visualization tool for easily creating 
+        <a href="http://digitalsinologist.com/texts/XieLingyun/index.html">interactive exhibits</a>. It displays
         a timeline and Google Maps view of the poet&rsquo;s travels and career
         superimposed with literary works and historical commentary.</li>
     </ul>
@@ -131,6 +170,8 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
       <li>Project management</li>
       <li>User experience</li>
       <li>User testing</li>
+      <li><abbr title="Hypertext Markup Language">HTML</abbr> / 
+        <abbr title="Cascading Stylesheets 3">CSS3</abbr></li>
       <li><abbr title="Quality Assurance">QA</abbr> / Testing</li>
     </ul>
     <p>The <abbr title="Science, Mathematics And Research for Transformation">SMART</abbr>
@@ -198,7 +239,7 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
         allow users to directly interact with their images as if they were physical objects,
         rather than working through dialog boxes and form controls.</li>
       <li>Websockets allow extremely fast two-way communication between the server
-        and the user's browser, making it possible to interact with no noticeable delay.</li>
+        and the user&rsquo;s browser, making it possible to interact with no noticeable delay.</li>
     </ul>
     <p>The web technology we have now is unbelievable. I designed, prototyped, built,
       and launched Deco, by myself, in just a month. </p>
@@ -206,8 +247,8 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
   
   <div class="section">
     <hr id="wssr"/>
-    <h2><a href="http://whatshouldsheread.com/">&ldquo;What should she read?&rdquo;</a></h2>
-    <h3>Parents don&rsquo;t want choice, they want an answer.</h3>
+    <h2><a href="http://whatshouldsheread.com/">What should she read?</a></h2>
+    <h3>Recommending children&rsquo;s books to busy parents.</h3>
       <ul class="skills">
         <li>User experience</li>
         <li>Performance</li>
@@ -219,7 +260,7 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
       of navigating: browsing like Amazon, recommendations like Netflix, or categories like Yahoo.
       These systems help users make choices and emphasize the wide range of possible answers.
     </p>
-    <p>But parents don't want choices, they already face the thousands of young adult
+    <p>But parents don&rsquo;t want choices, they already face the thousands of young adult
       books in libraries and bookstores. <strong>So we simplified the site to
       a core dialogue.</strong> Parents ask a question and get one quality answer.
       If their daughter has already read that book, they can ask for another.</p>
@@ -249,12 +290,11 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     </p>
     
   </div>
-    
+  
   <div class="section">
     <hr id="wantw"/>
     <h2><a href="http://adamsolove.com/wantw/">We are not the web</a></h2>
-    <h3>Colored rectangles, form controls, drop shadows? They are not the web. 
-      <em>I am</em>.</h3>
+    <h3>Deconstructing the colored rectangles and form controls we call the web.</h3>
     <ul class="skills">
       <li>JavaScript</li><li>Prototype.js</li>
       <li><abbr title="Hypertext Markup Language 5, the new version of the way webpages are constructed">HTML5</abbr></li>
