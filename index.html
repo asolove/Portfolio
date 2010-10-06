@@ -14,8 +14,10 @@ h1 { color:#361; position:fixed; right:0px; top:0; font: bold 20px/20px helvetic
 h1:hover { background-color:#361; color:#fff;}
 h1 a:link, h1 a:visited { text-decoration:none; border-bottom:none;}
 h2 { color:#c38; font: bold 24px/24px helvetica; margin:0;padding:1em 0 0; clear:both;}
+h2 a:link, h2 a:visited { color:#c38; border-bottom-color:#f9cce8;}
 h3 { font-weight:normal; font-size:32px; line-height:48px; margin:32px 0 16px;}
 
+ul { list-style-type:circle;}
 .section>p, .section>ul{width:500px;float:right;margin-bottom:0;}
 .section>ul.skills,
 .section>ul.links { font:12px/24px arial; color:#AA9988; font-weight:bold; width:150px; float:left; margin:1.5em 0 0; padding:7px 0 0;list-style-type:none;}
@@ -23,14 +25,19 @@ h3 { font-weight:normal; font-size:32px; line-height:48px; margin:32px 0 16px;}
 .links a:link,
 .links a:visited { color:#71ae55; border-width:0px; text-decoration:underline;}
 
-p { margin:1.5em 0 0 0;}
+p, p.caption+p { margin:1.5em 0 0 0; text-indent:0;}
+img+p, p.caption+p { margin-top:0; text-indent:0;}
 p+p { margin:0; text-indent:1.3em;}
-img { padding:2px; border:4px solid #AA9988; margin:18px 0;} /* 24px - 2 - 4*/
+p.caption { float:left; width:150px; font:12px/18px arial; color:#876; margin:4px 0 0;}
 
-a:link, a:visited { text-decoration:none; border-bottom:1px solid #fdb; color:#361;}
+img { padding:2px; border:4px solid #AA9988; margin:18px 0;} /* 24px - 2 - 4*/
+abbr { border-bottom:1px dotted #a98;}
+
+a:link, a:visited { text-decoration:none; border-bottom:1px solid #cea; color:#361;}
 
 .section { border-left:10px solid #261; padding-left:30px; overflow:auto; padding-bottom:36px; position:relative;}
-.section:nth-child(even) { border-left-color:#71ae55;}
+.section#contents { border-left-color:#c38; background-color:#f9cce8;}
+.section:nth-child(odd) { border-left-color:#71ae55;}
 hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
 </style>
 </head>
@@ -42,8 +49,8 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     <h2>Adam Solove</h2>
     <h3>I design and build sites that stretch the web to its limits.
       Because of my work, <a href="#wssr">middle-schoolers are enjoying library books</a>,
-      scholars better understand two-thousand year-old poems, and terminal
-      cancer patients are still alive.</h3>
+      <a href="#ds">scholars better understand two-thousand year-old poems</a>, and 
+      <a href="#dhair">cancer patients have longer, more joyful lives.</h3>
     <ul class="links">
       <li>Find me at</li>
       <li><a href="http://www.linkedin.com/in/asolove">LinkedIn</a></li>
@@ -65,17 +72,91 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     <p>I&rsquo;ve spent the last ten years developing precisely those skills.
       <em>Now it&rsquo;s time to do something awesome.</em></p>
   </div>
-  <div class="section">
+  <div class="section" id="contents">
+    <h2>Contents</h2>
     
+  </div>
+  <div class="section" id="dhair">
+    <h2>Clinical Informatics Research Group</h2>
+    <h3>Helping cancer patients find patterns in their symptoms.</h3>
+      
+    <p>During chemotherapy and other cancer treatments, patients are told
+      to expect a wide variety of side-effects. Many patients have difficulty
+      with their short-term memory, and grow complacent with the expectation of 
+      health difficulties, so they never report their problems.</p>
+      <p>I was the web
+      developer on a medical research project that asked patients to regularly
+      fill out an online health survey. I built the survey software
+      and the algorithms for producing statistical data. I also designed an
+      interactive self-help tool for viewing changes in symptoms, making journal
+      entries about the treatment, and getting advice on self-care.</p>
+      <p>The research results were clear. Patients who regularly and systematically
+        thought about their symptoms were more likely to insist on treatment
+        and get help from their doctor. Patients who frequently looked at the charts
+        of their symptoms often noticed patterns that doctors missed.</p>
+      <p>Some of the patients earned months or years on their life and substantially
+        reduced the suffering they experienced while in treatment.</p>
+  </div>
+  <div class="section" id="ds">
     <hr/>
-    <h2>Ancient China</h2>
+    <h2>Digital Sinologist</h2>
+    <h3>What does digital scholarship look like?</h3>
+    <p>My graduate studies centered on Classical Chinese poetry of the third to
+      eighth centuries. The resources for doing this research are, necessarily,
+      dusty old books and a handful of poorly-digitized databases.</p>
+      
     <img src="critex.jpg" width="670px"/>
+    <p class="caption">Using Critex to typeset a poem with translation,
+      textual criticism, and commentary.</p>
+    <p>I built experiments for finding and publishing research in the digital
+      medium:</p>
+    <ul>  
+      <li>An online reader for critical editions that takes full advantage
+        of hypertext and interactivity.</li>
+      <li>An easy-to-use Mac OS program for transcribing or creating critical editions.
+        Once entered, the texts can be exported as interactive webpages or professionally-typeset
+         books (using TeX)</li>
+      <li>A visualization tool for creating interactive exhibits. It displays
+        a timeline and Google Maps view of the poet&rsquo;s travels and career
+        superimposed with literary works and historical commentary.</li>
+    </ul>
     
   </div>
   
   <div class="section">
-    <h2>Ouch, that SMARTs</h2>
+    <hr id="smart"/>
+    <h2><abbr title="Science, Mathematics And Research for Transformation">SMART</abbr> Selection Portal</h2>
+    <h3>Placing graduate researchers in the right labs.</h3>
+    <ul class="skills">
+      <li>Project management</li>
+      <li>User experience</li>
+      <li>User testing</li>
+      <li><abbr title="Quality Assurance">QA</abbr> / Testing</li>
+    </ul>
+    <p>The <abbr title="Science, Mathematics And Research for Transformation">SMART</abbr>
+       program awards fellowships that pay for student researchers
+      to attend graduate school if they agree to work for the 
+      Department of Defense after they graduate.</p>
+    <p>The selection portal pairs fellowship-winners with the right labs
+      based on educational and demographic information, their preferences,
+      and some internal politics.</p>
     <img src="smart.jpg" width="670px"/>
+    
+    <p class="caption">
+      Prioritizing applicants by
+      discipline, expert rankings, lab staff votes,
+      and budget constraints.      
+    </p>
+    <p>I worked with the program&rsquo;s staff to understand the current, Excel-based process
+      and simplify it into a clear online workflow. 
+      With a team of my coworkers at 
+      <a href="http://www.asee.org/"><abbr title="American Society for Engineering Education">ASEE</abbr></a>, we built the entire site in the course of two months.</p>
+    <p>I designed a component library of buttons, typographic styles, and
+      patterns for displaying tables, nesting, and hierarchies.
+      I developed a rich iconography to display hundreds of applicant preferences 
+      and lab assignments in a limited space. And I managed the development 
+      and testing of the final application based on my detailed mockups.</p> 
+    
   </div>
   
   <div class="section">
@@ -86,12 +167,13 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
       <li>User Experience</li>
       <li>JavaScript</li>
       <li>Node.js</li>
-      <li>HTML5</li>
-      <li>CSS3</li>
+      <li><abbr title="Hypertext Markup Language 5, the new version of the way webpages are constructed">HTML5</abbr></li>
+      <li><abbr title="Cascading Stylesheets, the new version of the way webpages are designed">CSS3</abbr></li>
+      
     </ul>
     </ul>
     <p>Deco brings the benefits of design moodboards online, allowing real-time
-      collaboration on design research and documentation. Users upload, organize,
+      collaboration on design research and documentation. Multiple users upload, organize,
       and play with images, videos, and labels until they get a feel for what
       the design should be.</p>
     <p>Using example images improves client communication. Most clients
@@ -124,7 +206,7 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
   
   <div class="section">
     <hr id="wssr"/>
-    <h2>&ldquo;What should she read?&rdquo;</h2>
+    <h2><a href="http://whatshouldsheread.com/">&ldquo;What should she read?&rdquo;</a></h2>
     <h3>Parents don&rsquo;t want choice, they want an answer.</h3>
       <ul class="skills">
         <li>User experience</li>
@@ -143,6 +225,9 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
       If their daughter has already read that book, they can ask for another.</p>
       
     <img src="wssr.jpg" width="670px"/>
+    <p class="caption">A simple dialogue on 
+      <a href="http://whatshouldsheread.com/">What should she read?</a></p>
+      
     <p>Because the site is a dialogue, it needs to be polite:</p>
     <ul>
       <li>It responds quickly. The server-side code and the web page sent in reply
@@ -167,24 +252,36 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     
   <div class="section">
     <hr id="wantw"/>
-    <h2>We are not the web</h2>
+    <h2><a href="http://adamsolove.com/wantw/">We are not the web</a></h2>
     <h3>Colored rectangles, form controls, drop shadows? They are not the web. 
       <em>I am</em>.</h3>
     <ul class="skills">
       <li>JavaScript</li><li>Prototype.js</li>
-      <li>HTML5</li><li>CSS</li><li>Copywriting</li>
+      <li><abbr title="Hypertext Markup Language 5, the new version of the way webpages are constructed">HTML5</abbr></li>
+      <li><abbr title="Cascading Stylesheets, the new version of the way webpages are designed">CSS3</abbr></li>
+      <li>Copywriting</li>
     </ul>
     <p>I do a lot of work: in-house, for clients, on contract, as a volunteer.
       Normally someone comes to me with a plan already half thought-out.
       I love to solve their problems, and am glad that even people outside of the programming and design 
       communities have established mental models of what web design can be.</p>
+    <a href="http://adamsolove.com/wantw/"><img src="wantw.jpg" width="670px"/></a>
+    <p class="caption">The closing sequence of 
+      <a href="http://adamsolove.com/wantw">We are not the web.</a>
     <p>But occasionally I need to stop normal work, throw away normal metaphors, and
       deconstruct the boxes and form controls that I try to imbue with personality.
       "We are not the web" is a brief interactive essay that expressed some pent-up
       frustration and helped me think through how to broaden my view of web design.
     </p>
-    <img src="wantw.jpg" width="670px"/>
+      
   </div>
+  <div class="section">
+    <hr/>
+    <h2>Portfolio</h2>
+    <h3>And then there&rsquo;s this portfolio site, which I designed in the browser,
+      hand-coded, and deployed in six hours so that I could apply for a job I really wanted at 
+      <abbr title="National Public Radio">NPR</abbr>.</h3>
+    <p>You guys are doing something amazing over there, and I want to be part of it.</p>
 </div>
 </body>
 </html>
