@@ -45,7 +45,7 @@
   .section>ul.links { font:12px/24px arial; color:#AA9988; font-weight:bold; width:150px; float:left; margin:17px 0 0; padding:7px 0 0;list-style-type:none; }
   
   .section img { padding:2px; border:4px solid #AA9988; margin:18px 0;} /* 24px - 2 - 4*/
-  .section hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
+  .section hr { border-width:0px; background: #f9cce8 url("stripe-bg.png"); height:12px; clear:both; margin:0; }
   
   p, p.caption+p { margin:1.5em 0 0 0; text-indent:0;}
   img+p, p.caption+p { margin-top:0; text-indent:0;}
@@ -60,7 +60,7 @@
   #wrap { width:730px; }
 
   /* contents */
-  #contents { border-left-color:#c38; background-color:#f9cce8;}
+  #contents { border-left-color:#c38; background: #f9cce8 url("stripe-bg.png"); }
   #contents ul { list-style-type:none; }
   #contents ul li { margin:0 24px 12px 0;}
   #contents a:link, 
@@ -68,9 +68,18 @@
   #contents a:hover { background-color:#fff;}
 
   /* social media links */
+  .links a { border-width:0px; text-decoration:underline; display:block; margin-left:-20px; padding-left:20px;}
   .links a:link,
-  .links a:visited { color:#483; border-width:0px; text-decoration:underline;}
-
+  .links a:visited { color:#483; }
+  .links a:hover { background-color:transparent;}
+  
+  .section>ul.links li { margin-left:2em; }
+  .section>ul.links li:first-child { margin-left:0;}
+  .links #linkedin { list-style-image: url(linkedin.png); }
+  .links #email    { list-style-image: url(email.png); } 
+  .links #github   { list-style-image: url(github.png); }
+  .links #twitter  { list-style-image: url(twitter.png);}
+  .links #blog     { list-style-image: url(feed.png);}
 </style>
 </head>
 
@@ -85,11 +94,11 @@
       <a href="#dhair">cancer patients have longer, more joyful lives.</a></h3>
     <ul class="links">
       <li>Find me at</li>
-      <li><a href="mailto:asolove@gmail.com">Email</a></li>
-      <li><a href="http://www.linkedin.com/in/asolove">LinkedIn</a></li>
-      <li><a href="http://github.com/asolove">GitHub</a></li>
-      <li><a href="http://twitter.com/asolove">Twitter</a></li>
-      <li><a href="http://electriceloquence.net/articles">Blog</a></li>
+      <li id="email"><a href="mailto:asolove@gmail.com">Email</a></li>
+      <li id="linkedin"><a href="http://www.linkedin.com/in/asolove">LinkedIn</a></li>
+      <li id="github"><a href="http://github.com/asolove">GitHub</a></li>
+      <li id="twitter"><a href="http://twitter.com/asolove">Twitter</a></li>
+      <li id="blog"><a href="http://electriceloquence.net/articles">Blog</a></li>
     </ul>
     <p>When was the last time a web site 
       convinced you of an idea you disagreed with? Or encouraged you to stop
