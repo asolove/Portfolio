@@ -8,42 +8,69 @@
 	<title>Adam Solove: Portfolio</title>
 	
 <style>
-body { font:16px/1.5 georgia; padding:0;margin:0; background-color:#fff;color:#321; }
-#wrap { width:730px;}
-h1 { color:#361; position:fixed; right:0px; top:0; font: bold 20px/20px helvetica; padding:20px; margin:0;}
-h1:hover { background-color:#361; color:#fff;}
-h1 a:link, h1 a:visited { text-decoration:none; border-bottom:none;}
-h2 { color:#c38; font: bold 24px/24px helvetica; margin:0;padding:1em 0 0; clear:both;}
-h2 a:link, h2 a:visited { color:#c38; border-bottom-color:#f9cce8;}
-h3 { font-weight:normal; font-size:32px; line-height:48px; margin:32px 0 16px;}
+/* 
+   Kudos for viewing the source. Maybe mention that if you contact me.
 
-ul { list-style-type:circle;}
-.section>p, .section>ul{width:500px;float:right;margin-bottom:0;}
-.section>ul.skills,
-.section>ul.links { font:12px/24px arial; color:#AA9988; font-weight:bold; width:150px; float:left; margin:1.5em 0 0; padding:7px 0 0;list-style-type:none;}
-.section>ul.links { margin-top:17px;}
-.links a:link,
-.links a:visited { color:#483; border-width:0px; text-decoration:underline;}
+   My wife told me the green and pink color scheme looked like
+   an alligator in a tutu. 
 
-p, p.caption+p { margin:1.5em 0 0 0; text-indent:0;}
-img+p, p.caption+p { margin-top:0; text-indent:0;}
-p+p { margin:0; text-indent:1.3em;}
-p.caption { float:left; width:150px; font:12px/18px arial; color:#876; margin:4px 0 0;}
+   Of course I would normally have external css, a reset css,
+   documented styles, etc., but this is a single-page site and 
+   this way things are easier.
+*/
 
-img { padding:2px; border:4px solid #AA9988; margin:18px 0;} /* 24px - 2 - 4*/
-abbr { border-bottom:1px dotted #a98;}
+/* reusable components */
+  abbr { border-bottom:1px dotted #a98;}
+  em.amp { font-style:italic; font-family: "Hoefler Text", "Palatino", "Palatino Linotype";}
+  
+  /* headers */
+  h1, h2 { color:#c38; font: bold 24px/24px helvetica; margin:0;padding:1em 0 0; clear:both;}
+  h2 a:link, h2 a:visited { color:#c38; border-bottom-color:#f9cce8;}
+  h3 { font-weight:normal; font-size:32px; line-height:48px; margin:32px 0 16px;}
 
-a:link, a:visited { text-decoration:none; border-bottom:1px solid #cea; color:#361;}
-a:hover { background-color:#ae9;}
+  /* lists */
+  ul { list-style-type:circle;}
+  
+  /* links */
+  a:link { text-decoration:none; border-bottom:1px solid #cea; color:#361;}
+  a:visited { color:#472;}
+  a:hover { background-color:#ae9;}
 
-.section { border-left:10px solid #261; padding-left:30px; overflow:auto; padding-bottom:36px; position:relative;}
-.section:nth-child(even) { border-left-color:#71ae55;}
-.section#contents { border-left-color:#c38; background-color:#f9cce8;}
-#contents ul { list-style-type:none; }
-#contents ul li { margin:0 24px 12px 0;}
-#contents a:link, #contents a:visited { color:#261; border-bottom:1px solid #261; font-size:1.2em; line-height:23px; }
-#contents a:visited { background-color:#fff;}
-hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
+  /*  sections */
+  .section { border-left:10px solid #261; padding-left:30px; overflow:auto; padding-bottom:36px; position:relative;}
+  .section:nth-child(even) { border-left-color:#71ae55;}
+  .section>p, .section>ul{width:500px;float:right;margin-bottom:0;}
+  
+  .section>ul.skills,  
+  .section>ul.links { font:12px/24px arial; color:#AA9988; font-weight:bold; width:150px; float:left; margin:17px 0 0; padding:7px 0 0;list-style-type:none; }
+  
+  .section img { padding:2px; border:4px solid #AA9988; margin:18px 0;} /* 24px - 2 - 4*/
+  .section hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
+  
+  p, p.caption+p { margin:1.5em 0 0 0; text-indent:0;}
+  img+p, p.caption+p { margin-top:0; text-indent:0;}
+  p+p { margin:0; text-indent:1.3em;}
+  p.caption { float:left; width:150px; font:12px/18px arial; color:#876; margin:4px 0 0;}
+  
+    
+
+/* specific elements */
+  /* main layout */
+  body { color:#321; font:16px/1.5 georgia, serif; margin:0; padding:0;}
+  #wrap { width:730px; }
+
+  /* contents */
+  #contents { border-left-color:#c38; background-color:#f9cce8;}
+  #contents ul { list-style-type:none; }
+  #contents ul li { margin:0 24px 12px 0;}
+  #contents a:link, 
+  #contents a:visited { color:#261; border-bottom:1px solid #261; font-size:1.2em; line-height:23px; }
+  #contents a:hover { background-color:#fff;}
+
+  /* social media links */
+  .links a:link,
+  .links a:visited { color:#483; border-width:0px; text-decoration:underline;}
+
 </style>
 </head>
 
@@ -51,7 +78,7 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
 <div id="wrap">
   <div class="section">
     <hr id="top"/>
-    <h2>Adam Solove</h2>
+    <h1>Adam Solove</h1>
     <h3>I design and build sites that stretch the web to its limits.
       Because of my work, <a href="#wssr">middle-schoolers are enjoying library books</a>,
       <a href="#ds">scholars better understand two-thousand year-old poems</a>, and 
@@ -78,6 +105,7 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     <p>I&rsquo;ve spent the last ten years developing precisely those skills.
       <em>Now it&rsquo;s time to do something awesome.</em></p>
   </div>
+  
   <div class="section" id="contents">
     <h2>Contents</h2>
     <p class="caption">A few recent highlights from ten years of web design and development.</p>
@@ -86,10 +114,10 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
         Placing graduate researchers in the right labs
       </a></li>
       <li><a href="#deco">
-        Simply, collaboratively, moodboarding online
+        Moodboarding online, simply <em class="amp">&amp;</em> collaboratively
       </a></li>
       <li><a href="#ds">
-        Creating and publishing digital-born scholarship
+        Creating <em class="amp">&amp;</em> publishing digital-born scholarship
       </a></li>
       <li><a href="#wssr">
         Recommending children&rsquo;s books to busy parents
@@ -128,15 +156,18 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
       discipline, expert rankings, lab staff votes,
       and budget constraints.      
     </p>
-    <p>I worked with the program&rsquo;s staff to understand the current, Excel-based process
-      and simplify it into a clear online workflow. 
-      With a team of my coworkers at 
-      <a href="http://www.asee.org/"><abbr title="American Society for Engineering Education">ASEE</abbr></a>, we built the entire site in the course of two months.</p>
-    <p>I designed a component library of buttons, typographic styles, and
-      patterns for displaying tables, nesting, and hierarchies.
-      I developed a rich iconography to display hundreds of applicant preferences 
-      and lab assignments in a limited space. And I managed the development 
-      and testing of the final application based on my detailed mockups.</p> 
+    <p>I was the sole designer, working with the program&rsquo;s staff
+      to determine requirements, create a simple domain model, and design 
+      <abbr>HTML</abbr> mockups for implementation. 
+      I designed a component library of buttons, typographic styles, and
+      patterns for displaying tables, nesting, and hierarchies.</p>
+    <p>The most involved screen allowed top-level staff to make
+      final decisions based on thousands of requests from the applicants
+      and labs. I developed a rich iconographic system that allowed them
+      to visualize all of this data, interact with it directly, and see
+      the results of their changes immediately.
+    <p>I also managed the development schedule
+      and testing of the final application prior to on-time delivery.</p> 
     
   </div>
   
@@ -169,7 +200,6 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     
       </embed>
     </object>
-    
     <p>The Deco prototype is also a meditation on how minor advances in web technology
       can lead to major advances in the ease of interaction:</p>
     <ul>
@@ -179,17 +209,17 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
         allow users to directly interact with their images as if they were physical objects,
         rather than working through dialog boxes and form controls.</li>
       <li>Websockets allow extremely fast two-way communication between the server
-        and the user&rsquo;s browser, making it possible to interact with no noticeable delay.</li>
+        and the user&rsquo;s browser, making it possible to interact in real time.</li>
     </ul>
-    <p>The web technology we have now is unbelievable. I designed, prototyped, built,
-      and launched Deco, by myself, in just a month. </p>
+    <p>I designed, built and deployed Deco in two months of after-work free time.</p>
+    
   </div>
   
   
   <div class="section" id="ds">
     <hr/>
     <h2>Digital Sinologist</h2>
-    <h3>Creating and publishing digital-born scholarship.</h3>
+    <h3>Creating <em class="amp">&amp;</em> publishing digital-born scholarship.</h3>
     <ul class="skills">
       <li>Typography</li>
       <li>Javascript</li>
@@ -247,7 +277,7 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     <p>Because the site is a dialogue, it needs to be polite:</p>
     <ul>
       <li>It responds quickly. The server-side code and the web page sent in reply
-        have been meticulously tuned for speed. <strong>Only a third of a second</strong> elapses from
+        have been meticulously tuned for speed. <strong>Only a quarter of a second</strong> elapses from
         asking a question to the answer fully-rendered on screen.</li>
       <li>It doesn&rsquo;t forget. The second time you visit the home page,
         it greets you with your most recent question and a
@@ -257,11 +287,12 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
         to provide suggestions for girls. And when it can&rsquo;t find you any more
         helpful answers, it apologizes and tells you where you could go to learn more.</li>
     </ul>
-    <p>Rare are the projects that can afford this kind of polish and this 
-      level of attention to detail. But when I see the results &mdash;
-      girls excited to finish one book and get the next recommendation &mdash;
-      I am inspired to spend the same care and instill the same excitement
-      into my everyday projects.
+    <p>I rarely get to control a complete project&mdash;design, coding,
+      tweaking, and testing. And I rarely have the time to achieve this
+      level of attention to detail. But when I see the results&mdash;girls
+      excited to finish one book and get the next recommendation&mdash;I
+      am inspired to spend the same care and instill the same delight
+      with my everyday projects.
     </p>
     
   </div>
@@ -323,5 +354,25 @@ hr { border-width:0px;border-bottom:12px solid #f9cce8; clear:both; margin:0; }
     <h3><a href="#contents">&#8679; Back to Top </a></h3>
   </div>
 </div>
+
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16167055-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = 'http://www.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script> 
+
 </body>
 </html>
