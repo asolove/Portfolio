@@ -27,14 +27,19 @@
   h1, h2 { color:#c38; font: bold 24px/24px helvetica; margin:0;padding:1em 0 0; clear:both;}
   h2 a:link, h2 a:visited { color:#c38; border-bottom-color:#f9cce8;}
   h3 { font-weight:normal; font-size:32px; line-height:48px; margin:32px 0 16px;}
+  .abstract p,
+  .abstract ul { width:500px; float:right; font-size:24px; line-height:36px; margin:0 0 0 100px;}
 
   /* lists */
   ul { list-style-type:circle;}
   
   /* links */
   a:link { text-decoration:none; border-bottom:1px solid #cea; color:#361;}
-  a:visited { color:#472;}
+  a:visited { color:#472;border-bottom:1px solid #cea;}
   a:hover { background-color:#ae9;}
+
+  p a:link,
+  p a:visited { color:#240; border-bottom:1px solid #bd9;}
 
   /*  sections */
   .section { border-left:10px solid #261; padding-left:30px; overflow:auto; padding-bottom:36px; position:relative;}
@@ -101,10 +106,15 @@
   <div class="section">
     <hr id="top"/>
     <h1>Adam Solove</h1>
-    <h3>I design and build sites that stretch the web to its limits.
-      Because of my work, <a href="#wssr">middle-schoolers are enjoying library books</a>,
-      <a href="#ds">scholars better understand two-thousand year-old poems</a>, and 
-      <a href="#dhair">cancer patients have longer, more joyful lives.</a></h3>
+    <div class="abstract">
+      <h3>I design and build sites that stretch the web to its limits.</h3>
+      <p>Because of my work,</p>
+      <ul>
+        <li><a href="#wssr">middle-schoolers are enjoying library books,</a></li>
+        <li><a href="#ds">scholars better understand ancient poems</a>, and</li>
+        <li><a href="#dhair">cancer patients have longer, more joyful lives</a>.</li>
+      </ul>
+    </div>
     <ul class="links">
       <li>Find me at</li>
       <li id="email"><a href="mailto:asolove@gmail.com">Email</a></li>
@@ -128,8 +138,27 @@
       <em>Now it&rsquo;s time to do something awesome.</em></p>
   </div>
   
+  <div class="section">
+    <h2>Community Involvement</h2>
+    <h3>I <abbr title="love">&#9825;</abbr> the web community.
+      I also <abbr title="build">&#x2692;</abbr> it.</h3>
+      
+    <p>I attended the <a href="http://crankytalk.com/">Cranky Talk Workshop for New Speakers</a>, 
+      regularly attend <a href="http://adcmw.org/" title="Art Directors Club of Metropolitan Washington">ADCMW</a>
+      and <a href="http://refresh-dc.org/">RefreshDC</a> events, and have 
+      <a href="http://theuxworkshop.tv/ux-show-tell-deco-demonstration/">presented twice</a>
+       at <a href="http://uxshowandtell.ning.com/events/ux-show-tell-dc">UX Show &amp; Tell DC</a>.</p>
+    <p>I presented at the first 
+        <a href="http://thatcamp.org/" title="The Humanities and Technology Camp">THATCamp</a>,
+       an unconference on the use of technology in humanities research.</p>
+    <p>I contributed the article 
+      <a href="http://adamsolove.com/articles/digital-publishers-wanted">&ldquo;Digital Publishers Needed&rdquo;</a>
+         to the crowdsourced book 
+      <a href="http://hackingtheacademy.org/"><cite>Hacking the Academy</cite></a>.
+  </div>
+  
   <div class="section" id="contents">
-    <h2>Contents</h2>
+    <h2>Recent Projects</h2>
     <p class="caption">A few recent highlights from ten years of web design and development.</p>
     <ul>
       <li><a href="#smart">
