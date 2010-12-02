@@ -27,6 +27,7 @@
   h1, h2 { color:#c38; font: bold 24px/24px helvetica; margin:0;padding:1em 0 0; clear:both;}
   h2 a:link, h2 a:visited { color:#c38; border-bottom-color:#f9cce8;}
   h3 { font-weight:normal; font-size:32px; line-height:48px; margin:32px 0 16px;}
+  h4 { float:right; width:680px; margin-bottom:-4em; padding-top:11px; color:#AA9988; font:bold 12px/24px arial; text-transform:uppercase;}
   .abstract p,
   .abstract ul { width:500px; float:right; font-size:24px; line-height:36px; margin:0 0 0 100px;}
 
@@ -46,15 +47,16 @@
   .section:nth-child(even) { border-left-color:#71ae55;}
   .section>p, .section>ul{width:500px;float:right;margin-bottom:0;}
   
-  .section>ul.skills,  
-  .section>ul.links { font:12px/24px arial; color:#AA9988; font-weight:bold; width:150px; float:left; margin:17px 0 0; padding:7px 0 0;list-style-type:none; }
+  .section>.skills,  
+  .section>.links { font:12px/24px arial; color:#AA9988; font-weight:bold; width:150px; float:left; margin:17px 0 0; padding:7px 0 0;list-style-type:none; }
   
   .section img { padding:2px; border:4px solid #AA9988; margin:18px 0;} /* 24px - 2 - 4*/
+  .section .caption img { padding:0; border:0; margin:0;}
   .section hr { border-width:0px; background: #f9cce8 url("stripe-bg.png"); height:12px; clear:both; margin:0; }
   
   p, p.caption+p { margin:1.5em 0 0 0; text-indent:0;}
-  img+p, p.caption+p { margin-top:0; text-indent:0;}
-  p+p { margin:0; text-indent:1.3em;}
+  img+p, img+p.caption+p { margin-top:0; text-indent:0;}
+  p+p, p+p.caption+p { margin:0; text-indent:1.3em;}
   p.caption { float:left; width:150px; font:12px/18px arial; color:#876; margin:4px 0 0;}
   
     
@@ -121,7 +123,7 @@
       <li id="linkedin"><a href="http://www.linkedin.com/in/asolove">LinkedIn</a></li>
       <li id="github"><a href="http://github.com/asolove">GitHub</a></li>
       <li id="twitter"><a href="http://twitter.com/asolove">Twitter</a></li>
-      <li id="blog"><a href="http://electriceloquence.net/articles">Blog</a></li>
+      <li id="blog"><a href="http://electric-eloquence.tumblr.com/">Blog</a></li>
     </ul>
     <p>When was the last time a web site 
       convinced you of an idea you disagreed with? Or encouraged you to stop
@@ -143,14 +145,28 @@
     <h3>I <abbr title="love">&#9825;</abbr> the web community.
       I also <abbr title="build">&#x2692;</abbr> it.</h3>
       
+    <h4>Open source</h4>
+    <p>In gratitude for all of the open-source tools I use, I contribute back to the community
+      where I can.</p>
+    <ul>
+      <li><a href="https://github.com/asolove/cocoa-programming-with-nu/commit/ea42593ca39ff7528335e6fe8a26b8f4ac2bb34b">Sample apps for a Mac OS programming tutorial</a></li>
+      <li><a href="https://github.com/asolove/dm-more/commit/af4c00dc7dbe00934ed265e36793322388736efa">Tests and a bugfix for an edge case in DataMapper</a></li>
+      <li><a href="https://github.com/asolove/views_in_migrations">A Rails plugin for using MySQL views with ActiveRecord.</a></li>
+    </ul>      
+      
+    <h4>Local Community</h4>
     <p>I attended the <a href="http://crankytalk.com/">Cranky Talk Workshop for New Speakers</a>, 
       regularly attend <a href="http://adcmw.org/" title="Art Directors Club of Metropolitan Washington">ADCMW</a>
       and <a href="http://refresh-dc.org/">RefreshDC</a> events, and have 
       <a href="http://theuxworkshop.tv/ux-show-tell-deco-demonstration/">presented twice</a>
        at <a href="http://uxshowandtell.ning.com/events/ux-show-tell-dc">UX Show &amp; Tell DC</a>.</p>
+    
+    <h4>Conferences</h4>
     <p>I presented at the first 
         <a href="http://thatcamp.org/" title="The Humanities and Technology Camp">THATCamp</a>,
        an unconference on the use of technology in humanities research.</p>
+       
+    <h4>Writing</h4>
     <p>I contributed the article 
       <a href="http://adamsolove.com/articles/digital-publishers-wanted">&ldquo;Digital Publishers Needed&rdquo;</a>
          to the crowdsourced book 
@@ -194,24 +210,28 @@
       <li><abbr title="Quality Assurance">QA</abbr> / Testing</li>
     </ul>
     <p>The <abbr title="Science, Mathematics And Research for Transformation">SMART</abbr>
-       program awards fellowships that pay for student researchers
-      to attend graduate school if they agree to work for the 
-      Department of Defense after they graduate.</p>
-    <p>The selection portal pairs fellowship-winners with the right labs
-      based on educational and demographic information, their preferences,
-      and some internal politics.</p>
-    <img src="smart.jpg" width="670px" alt="Screenshot of SMART ranking screen, with applicant details listed and controls for ranking, deleting, and adding applicants to a selection list."/>
+       program awards fellowships that pair student researchers
+       with government labs who will employ them.</p>
+    <p>They wanted to transform their old, paper-based process for pairing
+      students and labs with an online system that let students and labs 
+      make selections themselves.
+      We had six weeks to understand the problem, design the interface,
+      build a working site, and troubleshoot the first users.</p>
+    <img src="smart.png" width="670px" alt="Screenshot of SMART ranking screen, with applicant details listed and controls for ranking, deleting, and adding applicants to a selection list."/>
     
     <p class="caption">
-      Prioritizing applicants by
-      discipline, expert rankings, lab staff votes,
-      and budget constraints.      
+      Resolving which lab will employ this student. Icons represent the labs&rsquo; desired students,
+      which they will employ, and which they have already lost.
     </p>
     <p>I was the sole designer, working with the program&rsquo;s staff
       to determine requirements, create a simple domain model, and design 
       <abbr>HTML</abbr> mockups for implementation. 
       I designed a component library of buttons, typographic styles, and
       patterns for displaying tables, nesting, and hierarchies.</p>
+    <p class="caption" style="margin-top:4em; ">
+      <img src="smart-buttons.png"/>
+      Standard buttons were part of a comprehensive style guide.
+    </p>
     <p>The most involved screen allowed top-level staff to make
       final decisions based on thousands of requests from the applicants
       and labs. I developed a rich iconographic system that allowed them
